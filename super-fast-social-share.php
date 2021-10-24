@@ -8,6 +8,8 @@
   Author URI: https://github.com/mattkiggen/
 */
 
+if (!defined("ABSPATH")) exit;
+
 require(dirname(__FILE__) . "/inc/settings.php");
 require(dirname(__FILE__) . "/inc/buttons.php");
 
