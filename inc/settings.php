@@ -34,6 +34,13 @@ class SuperFastSocialShareSettings {
       "sanitize_callback" => "sanitize_text_field",
       "default" => "1"
     ]);
+
+    // Load CSS
+    add_settings_field("sfss_css", "Load CSS", [$this, "loadCssHtml"], "sfss-settings-page", "sfss_first_section");
+    register_setting("sfssplugin", "sfss_css", [
+      "sanitize_callback" => "sanitize_text_field",
+      "default" => "1"
+    ]);
   }
 
   function locationHtml() {
@@ -54,6 +61,12 @@ class SuperFastSocialShareSettings {
   function iconsHtml() {
     ?>
     <input type="checkbox" name="sfss_icons" value="1" <?php checked(get_option("sfss_icons"), "1") ?>>
+    <?php
+  }
+
+  function loadCssHtml() {
+    ?>
+    <input type="checkbox" name="sfss_css" value="1" <?php checked(get_option("sfss_css"), "1") ?>>
     <?php
   }
 
