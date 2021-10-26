@@ -36,6 +36,7 @@ class SuperFastSocialShareSettings {
       "sanitize_callback" => "sanitize_text_field",
       "default" => "1"
     ]);
+    add_option("sfss_icons", "1");
 
     // Load CSS
     add_settings_field("sfss_css", "Load CSS", [$this, "loadCssHtml"], "sfss-settings-page", "sfss_first_section");
@@ -43,6 +44,7 @@ class SuperFastSocialShareSettings {
       "sanitize_callback" => "sanitize_text_field",
       "default" => "1"
     ]);
+    add_option("sfss_css", "1");
   }
 
   function locationHtml() {
