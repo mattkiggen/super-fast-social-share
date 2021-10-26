@@ -63,14 +63,16 @@ class SuperFastSocialShareSettings {
   }
 
   function iconsHtml() {
-    ?>
-    <input type="checkbox" name="sfss_icons" value="1" <?php checked(get_option("sfss_icons"), "1") ?>>
-    <?php
+    $this->checkBoxHtml("sfss_icons");
   }
 
   function loadCssHtml() {
+    $this->checkBoxHtml("sfss_css");
+  }
+
+  function checkBoxHtml($name) {
     ?>
-    <input type="checkbox" name="sfss_css" value="1" <?php checked(get_option("sfss_css"), "1") ?>>
+    <input type="checkbox" name="<?php echo $name ?>" value="1" <?php checked(get_option($name), "1") ?>>
     <?php
   }
 
