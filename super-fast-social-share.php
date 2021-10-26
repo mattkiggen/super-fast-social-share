@@ -20,7 +20,7 @@ class SuperFastSocialShare {
     $buttons = new SuperFastSocialShareButtons();
 
     if(get_option("sfss_css") == "1") {
-      wp_enqueue_style("sfssStyles", plugin_dir_url(__FILE__) . "/assets/plugin.css", null, "1.0");
+      wp_enqueue_style("sfssStyles", plugin_dir_url(__FILE__) . "assets/plugin.css", null, "1.0");
     }
 
     if(get_option("sfss_icons") == "1") {
